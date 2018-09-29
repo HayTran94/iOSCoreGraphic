@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,23 +20,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtc-JY-auO" customClass="CustomButton" customModule="CoreGraphic" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="293.5" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="396.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="WQt-n7-gWt"/>
                                     <constraint firstAttribute="height" constant="100" id="zwW-XQ-f6n"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.1764705882" green="0.74509803919999995" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.24917773714482486" green="0.82745098039999998" blue="0.054425769183906028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsq-gs-KDp" customClass="CustomButton" customModule="CoreGraphic" customModuleProvider="target">
+                                <rect key="frame" x="162" y="525.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="9lF-hq-6ip"/>
+                                    <constraint firstAttribute="height" constant="50" id="obi-e6-Dl6"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="wsS-ey-Tv3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.82745098039999998" green="0.14901960780000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Jtc-JY-auO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2wC-gP-pYu"/>
-                            <constraint firstItem="Jtc-JY-auO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="VkW-fg-PYZ"/>
+                            <constraint firstItem="Jtc-JY-auO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.3" id="VkW-fg-PYZ"/>
+                            <constraint firstItem="Nsq-gs-KDp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.65" id="k0J-dy-bgz"/>
+                            <constraint firstItem="Nsq-gs-KDp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oBE-KO-lIh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

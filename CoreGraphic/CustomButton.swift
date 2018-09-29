@@ -11,7 +11,6 @@ import UIKit
 
 @IBDesignable
 class CustomButton: UIButton {
-    
     @IBInspectable var fillColor: UIColor = UIColor.red
     @IBInspectable var isAddButton : Bool = true
     
@@ -23,6 +22,13 @@ class CustomButton: UIButton {
     }
     
     func drawSign() {
+        drawHorizontalDash()
+        if (isAddButton) {
+            drawVerticalDash()
+        }
+    }
+    
+    func drawHorizontalDash() {
         let dashWidth: CGFloat = min(bounds.width, bounds.height) * 0.6
         let dashHeight: CGFloat = 3
         let dashPath = UIBezierPath()
@@ -33,7 +39,14 @@ class CustomButton: UIButton {
         dashPath.stroke()
     }
     
-    func drawDashWidth() {
-        
+    func drawVerticalDash() {
+        let dashWidth: CGFloat = min(bounds.width, bounds.height) * 0.6
+        let dashHeight: CGFloat = 3
+        let dashPath = UIBezierPath()
+        dashPath.lineWidth = dashHeight
+        dashPath.move(to: CGPoint(x: bounds.width/2, y: bounds.height/2 - dashWidth/2))
+        dashPath.addLine(to: CGPoint(x: bounds.width/2, y: bounds.width/2 + dashWidth/2))
+        UIColor.white.setStroke()
+        dashPath.stroke()
     }
 }
