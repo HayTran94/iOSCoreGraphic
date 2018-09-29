@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var counterView: CounterView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +20,19 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    @IBAction func addAction(_ sender: Any) {
+        print("addAction")
+        if (counterView.counter < counterView.numberOfItems) {
+            counterView.counter = counterView.counter + 1
+        }
+    }
+    
+    @IBAction func subAction(_ sender: Any) {
+        print("subAction")
+        if (counterView.counter > 0) {
+            counterView.counter = counterView.counter - 1
+        }
+    }
+    
 }
 
